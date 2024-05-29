@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Switzer", sans-serif;
+}
+
+/* src/App.css */
+.container {
+  position: relative;
+  width: 200px; /* Adjust as needed */
+  height: 100px; /* Adjust as needed */
+  margin: 50px auto;
+}
+
+.box {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.first {
+  background-color: yellow;
+  left: 0;
+  animation: moveLeftRight 2s infinite alternate;
+}
+
+.center {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.third {
+  background-color: red;
+  left: 100%;
+  transform: translateX(-100%);
+  animation: moveRightLeft 2s infinite alternate;
+}
+
+@keyframes moveLeftRight {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(20px); /* Adjust as needed */
+  }
+}
+
+@keyframes moveRightLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(-130%); /* Adjust as needed */
+  }
+}
+.clipPath {
+  clip-path: polygon(0 5%, 100% 0, 100% 87%, 0% 100%);
+}
+.clipPath_2 {
+  clip-path: polygon(0 48%, 100% 21%, 100% 74%, 0% 100%);
+}
+.clipPath_3{
+clip-path: polygon(0 22%, 100% 0, 100% 100%, 0% 100%);
+}
+.clipPath_4{
+clip-path: polygon(0 22%, 100% 8%, 100% 62%, 0 79%);
+}
