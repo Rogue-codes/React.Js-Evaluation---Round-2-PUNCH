@@ -43,7 +43,7 @@ export default function Nav() {
       </div>
 
       {showMobileMenu && (
-        <div className="absolute w-[14rem] py-4 right-4 top-16 bg-PUNCH/Nav">
+        <div className="absolute w-[14rem] z-50 py-4 right-4 top-16 bg-PUNCH/Nav">
           <div className="flex flex-col  justify-center font-medium items-center gap-5">
             {navLinksArr.map((navLink) => (
               <Link to="/" className="">
